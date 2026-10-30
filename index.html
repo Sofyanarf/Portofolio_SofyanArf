@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio Muhammad Sofyan Arifin | Data Analyst & Student Teknik Informatika UAD</title>
+  <meta name="description" content="Portofolio Muhammad Sofyan Arifin, Mahasiswa Semester 7 Teknik Informatika Universitas Ahmad Dahlan berfokus pada Data Analyst, Business Intelligence, Data Visualization & Python.">
+  <meta name="keywords" content="Muhammad Sofyan Arifin, Data Analyst, Universitas Ahmad Dahlan, Teknik Informatika, UAD, Data Science, Python, SQL, Tableau, Power BI">
+  <meta name="author" content="Muhammad Sofyan Arifin">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Portofolio Muhammad Sofyan Arifin | Data Analyst & Student Teknik Informatika UAD">
+  <meta property="og:description" content="Portofolio profesional Muhammad Sofyan Arifin - Data Analyst & Mahasiswa Teknik Informatika UAD Semester 7.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="./images/avatar.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="/src/css/variables.css">
+  <link rel="stylesheet" href="/src/css/style.css">
+  <link rel="stylesheet" href="/src/css/terminal.css">
+  <link rel="stylesheet" href="/src/css/resume.css">
+</head>
+<body>
+  <!-- Background Canvas for Constellation Particles -->
+  <canvas id="bg-canvas"></canvas>
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+
+  <!-- NAVIGATION BAR -->
+  <header class="navbar-container" id="navbar">
+    <div class="container nav-content">
+      <a href="#hero" class="nav-brand" id="nav-brand">
+        <div class="brand-logo">
+          <span>&lt;</span>SA<span>/&gt;</span>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">Sofyan Arifin</span>
+          <span class="brand-status"><span class="status-dot"></span> <span data-i18n="nav.available">Open to Internship / Work</span></span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#hero" class="nav-link active" id="nav-link-hero" data-i18n="nav.home">Beranda</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link" id="nav-link-about" data-i18n="nav.about">Tentang</a></li>
+          <li class="nav-item"><a href="#skills" class="nav-link" id="nav-link-skills" data-i18n="nav.skills">Keahlian</a></li>
+          <li class="nav-item"><a href="#projects" class="nav-link" id="nav-link-projects" data-i18n="nav.projects">Proyek</a></li>
+          <li class="nav-item"><a href="#services" class="nav-link" id="nav-link-services" data-i18n="nav.services">Layanan</a></li>
+          <li class="nav-item"><a href="#experience" class="nav-link" id="nav-link-experience" data-i18n="nav.experience">Pengalaman</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link" id="nav-link-contact" data-i18n="nav.contact">Kontak</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Theme Toggle -->
+        <button class="icon-btn" id="theme-toggle" title="Toggle Theme" aria-label="Toggle Dark/Light Mode">
+          <i class="fa-solid fa-moon icon-dark"></i>
+          <i class="fa-solid fa-sun icon-light"></i>
+        </button>
+
+        <!-- Language Selector -->
+        <button class="icon-btn lang-btn" id="lang-toggle" title="Ubah Bahasa / Switch Language" aria-label="Toggle Language">
+          <span class="lang-text" id="current-lang">ID</span>
+        </button>
+
+        <!-- Terminal Quick Access -->
+        <button class="icon-btn terminal-trigger-btn" id="terminal-trigger" title="Buka CLI Terminal (Ctrl+K)" aria-label="Open Terminal">
+          <i class="fa-solid fa-terminal"></i>
+        </button>
+
+        <!-- CV Preview Modal Trigger -->
+        <button class="btn btn-sm btn-outline nav-cv-btn" id="open-cv-modal" data-i18n="nav.cv">
+          <i class="fa-solid fa-file-pdf"></i> Resume
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-text-content">
+          <div class="hero-badge">
+            <span data-i18n="hero.greeting">Halo, Selamat Datang di Portofolio Saya</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span data-i18n="hero.intro">Saya</span> <span class="highlight-gradient">M. Sofyan Arifin</span>,<br>
+            <span class="typing-container">
+              <span id="typing-text"></span><span class="cursor">&nbsp;</span>
+            </span>
+          </h1>
+
+          <p class="hero-description" data-i18n="hero.desc">
+            Mahasiswa Semester 7 Teknik Informatika Universitas Ahmad Dahlan dengan pengalaman Project Manager (MPTI), 2 tahun sebagai Operator Produksi (Painting Dept) di PT Astra Daihatsu Motor (2021-2023), serta lulusan Dicoding x DBS Foundation (Data Scientist) dengan proyek Capstone Path’Ora. Berfokus pada Data Analysis, Business Intelligence, Python Machine Learning, dan SQL.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary btn-glow" id="btn-hero-projects">
+              <span data-i18n="hero.cta_projects">Lihat Proyek Data</span> <i class="fa-solid fa-chart-pie"></i>
+            </a>
+            <a href="#contact" class="btn btn-secondary" id="btn-hero-contact">
+              <span data-i18n="hero.cta_contact">Hubungi Saya</span> <i class="fa-solid fa-paper-plane"></i>
+            </a>
+            <button class="btn btn-outline" id="btn-download-resume">
+              <i class="fa-solid fa-download"></i> <span data-i18n="hero.cta_cv">Unduh CV</span>
+            </button>
+          </div>
+
+          <!-- Quick Stats Row -->
+          <div class="hero-stats">
+            <div class="stat-card">
+              <div class="stat-value">
+                <span class="stat-number" data-target="2">0</span>
+                <span class="stat-plus"> Thn</span>
+              </div>
+              <div class="stat-label" data-i18n="hero.stat_exp">Tahun di PT Astra Daihatsu Motor</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-card">
+              <div class="stat-value">
+                <span class="stat-number" data-target="10">0</span>
+                <span class="stat-plus">+</span>
+              </div>
+              <div class="stat-label" data-i18n="hero.stat_projects">Proyek Selesai</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-card">
+              <div class="stat-value">
+                <span class="stat-number" data-target="7">0</span>
+                <span class="stat-plus"> Sem</span>
+              </div>
+              <div class="stat-label" data-i18n="hero.stat_uad">Semester Mahasiswa UAD</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="avatar-wrapper">
+            <div class="orbit-ring orbit-1"></div>
+            <div class="orbit-ring orbit-2"></div>
+            <div class="avatar-card">
+              <img src="./images/avatar.png" alt="Muhammad Sofyan Arifin - Data Analyst Avatar" class="avatar-img" id="hero-avatar-img">
+            </div>
+
+            <!-- Floating Tech Badges -->
+            <div class="floating-badge badge-react">
+              <i class="fa-brands fa-python"></i> Python
+            </div>
+            <div class="floating-badge badge-node">
+              <i class="fa-solid fa-database"></i> SQL
+            </div>
+            <div class="floating-badge badge-python">
+              <i class="fa-solid fa-chart-column"></i> Tableau
+            </div>
+            <div class="floating-badge badge-figma">
+              <i class="fa-solid fa-chart-line"></i> Power BI
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-down-indicator" aria-label="Scroll Down">
+        <span data-i18n="hero.scroll">Gulir ke Bawah</span>
+        <i class="fa-solid fa-chevron-down"></i>
+      </a>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle" data-i18n="about.subtitle">Mengenal Lebih Dekat</span>
+          <h2 class="section-title"><span data-i18n="about.title_prefix">Tentang</span> <span class="highlight-gradient" data-i18n="about.title_highlight">Saya</span></h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card-main glass-card">
+            <div class="about-header-meta">
+              <div class="meta-avatar">
+                <img src="./images/avatar.png" alt="Muhammad Sofyan Arifin Profile">
+              </div>
+              <div class="meta-info">
+                <h3>Muhammad Sofyan Arifin</h3>
+                <p class="role-badge" data-i18n="about.role">Data Analyst & Student Teknik Informatika (Semester 7)</p>
+                <p class="location"><i class="fa-solid fa-graduation-cap"></i> Universitas Ahmad Dahlan (UAD), Yogyakarta</p>
+              </div>
+            </div>
+
+            <!-- Interactive About Tabs -->
+            <div class="about-tabs-header">
+              <button class="about-tab-btn active" data-tab="tab-bio" id="tab-btn-bio">
+                <i class="fa-solid fa-user"></i> <span data-i18n="about.tab_bio">Biografi Akademik</span>
+              </button>
+              <button class="about-tab-btn" data-tab="tab-education" id="tab-btn-edu">
+                <i class="fa-solid fa-university"></i> <span data-i18n="about.tab_edu">Pendidikan & Sertifikasi</span>
+              </button>
+              <button class="about-tab-btn" data-tab="tab-principles" id="tab-btn-principles">
+                <i class="fa-solid fa-compass"></i> <span data-i18n="about.tab_principles">Prinsip Analisis Data</span>
+              </button>
+            </div>
+
+            <div class="about-tab-content">
+              <!-- Tab Bio -->
+              <div class="tab-pane active" id="tab-bio">
+                <p data-i18n="about.bio_p1">
+                  Halo! Saya Muhammad Sofyan Arifin, mahasiswa semester 7 Program Studi Teknik Informatika Universitas Ahmad Dahlan (UAD), Yogyakarta. Saya memiliki latar belakang pengalaman kerja profesional selama 2 tahun sebagai Operator Produksi di Departemen Painting PT Astra Daihatsu Motor (2021-2023), yang membentuk disiplin kerja industri yang tinggi, ketelitian kontrol kualitas (Zero Defect), pemantauan data proses, dan pemikiran analitis terstruktur.
+                </p>
+                <p data-i18n="about.bio_p2">
+                  Pada semester 6, saya menyelesaikan program intensif Dicoding x DBS Foundation (Data Scientist) dengan mengembangkan Capstone Project Path’Ora (Platform End-to-End Kesiapan Kerja dengan Dashboard Strategis & Rekomendasi Jalur Karir Otomatis). Saya juga dipercaya memimpin tim pengembang sebagai Project Manager dalam proyek sistem antrian cucian mobil dan motor berbasis web pada matakuliah MPTI. Keahlian saya mencakup Data Analytics, Machine Learning dengan Python, SQL kueri kompleks, serta dashboard Business Intelligence interaktif (Power BI, Streamlit, Tableau).
+                </p>
+
+                <div class="personal-details-grid">
+                  <div class="detail-item">
+                    <span class="detail-label" data-i18n="about.detail_name">Nama Lengkap:</span>
+                    <span class="detail-value">Muhammad Sofyan Arifin</span>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label" data-i18n="about.detail_location">Domisili:</span>
+                    <span class="detail-value">Yogyakarta, Indonesia</span>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label" data-i18n="about.detail_edu">Perguruan Tinggi:</span>
+                    <span class="detail-value" data-i18n="about.detail_edu_val">Universitas Ahmad Dahlan (2023 - Sekarang)</span>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label" data-i18n="about.detail_major">Program Studi:</span>
+                    <span class="detail-value" data-i18n="about.detail_major_val">S1 Teknik Informatika (Semester 7)</span>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label" data-i18n="about.detail_sma">Pendidikan SMA:</span>
+                    <span class="detail-value" data-i18n="about.detail_sma_val">Lulusan Tahun 2020</span>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label" data-i18n="about.detail_exp">Pengalaman Industri:</span>
+                    <span class="detail-value highlight-status" data-i18n="about.detail_exp_val">Operator Produksi (Painting Dept) – PT Astra Daihatsu Motor (2021-2023)</span>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label" data-i18n="about.detail_prog">Program Khusus:</span>
+                    <span class="detail-value" data-i18n="about.detail_prog_val">Dicoding x DBS (Data Scientist - Path’Ora) & PM MPTI</span>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label" data-i18n="about.detail_status">Fokus Karir:</span>
+                    <span class="detail-value highlight-status" data-i18n="about.detail_status_val">Data Analyst / Data Scientist</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tab Education & Career -->
+              <div class="tab-pane" id="tab-education">
+                <div class="timeline-list">
+                  <div class="timeline-item">
+                    <div class="timeline-badge"><i class="fa-solid fa-university"></i></div>
+                    <div class="timeline-content">
+                      <span class="timeline-date">2023 - Sekarang (Semester 7)</span>
+                      <h4>S1 Teknik Informatika</h4>
+                      <p class="timeline-org">Universitas Ahmad Dahlan (UAD), Yogyakarta</p>
+                      <p class="timeline-desc">Melanjutkan studi sarjana pasca pengalaman kerja industri. Berfokus pada peminatan Sains Data, Pengolahan Data Terdistribusi, Basis Data Lanjut (SQL), dan Komputasi Cerdas.</p>
+                    </div>
+                  </div>
+
+                  <div class="timeline-item">
+                    <div class="timeline-badge"><i class="fa-solid fa-brain"></i></div>
+                    <div class="timeline-content">
+                      <span class="timeline-date">2024 (Semester 6)</span>
+                      <h4>Dicoding x DBS Foundation – Data Scientist Learning Path</h4>
+                      <p class="timeline-org">DBS Foundation & Dicoding Indonesia</p>
+                      <p class="timeline-desc">Program akselerasi talenta Data Science komprehensif: Data Wrangling, EDA, pemodelan Machine Learning (Scikit-Learn). Sukses menuntaskan <strong>Capstone Project: Path’Ora</strong> – Platform End-to-End Kesiapan Kerja dengan fitur Dashboard Strategis dan Rekomendasi Jalur Karir Otomatis.</p>
+                    </div>
+                  </div>
+
+                  <div class="timeline-item">
+                    <div class="timeline-badge"><i class="fa-solid fa-spray-can"></i></div>
+                    <div class="timeline-content">
+                      <span class="timeline-date">2021 - 2023 (2 Tahun)</span>
+                      <h4>Operator Produksi – Departemen Painting</h4>
+                      <p class="timeline-org">PT Astra Daihatsu Motor (Astra Group)</p>
+                      <p class="timeline-desc">Menjalankan operasional produksi dan inspeksi mutu pengecatan bodi mobil (Zero Defect) selama 2 tahun pasca lulus SMA. Melakukan pencatatan data cacat (defect rate), pemantauan parameter proses kerja, serta penerapan budaya 5S, K3, dan Kaizen.</p>
+                    </div>
+                  </div>
+
+                  <div class="timeline-item">
+                    <div class="timeline-badge"><i class="fa-solid fa-school"></i></div>
+                    <div class="timeline-content">
+                      <span class="timeline-date">Lulus 2020</span>
+                      <h4>Sekolah Menengah Atas (SMA)</h4>
+                      <p class="timeline-org">Pendidikan Menengah Atas</p>
+                      <p class="timeline-desc">Menyelesaikan pendidikan SMA pada tahun 2020 dengan minat kuat di bidang sains dan teknologi sebelum memulai karir profesional di industri manufaktur otomotif.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tab Principles -->
+              <div class="tab-pane" id="tab-principles">
+                <div class="principles-grid">
+                  <div class="principle-card">
+                    <div class="principle-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                    <h4>Data Quality & Accuracy First</h4>
+                    <p>Memastikan setiap data melewati proses sanitasi, pembersihan, dan validasi sebelum diambil kesimpulan.</p>
+                  </div>
+                  <div class="principle-card">
+                    <div class="principle-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                    <h4>Actionable Business Insights</h4>
+                    <p>Analisis tidak hanya menyajikan angka, melainkan rekomendasi strategis yang bernilai bagi pengambilan keputusan.</p>
+                  </div>
+                  <div class="principle-card">
+                    <div class="principle-icon"><i class="fa-solid fa-chart-mixed"></i></div>
+                    <h4>Clear Data Storytelling</h4>
+                    <p>Menyampaikan hasil pengolahan data melalui grafik interaktif dan narasi yang mudah dipahami oleh semua pemangku kepentingan.</p>
+                  </div>
+                  <div class="principle-card">
+                    <div class="principle-icon"><i class="fa-solid fa-arrows-rotate"></i></div>
+                    <h4>Continuous Learning in AI & Data</h4>
+                    <p>Selalu memperbarui pengetahuan dengan alat analitik terbaru seperti BigQuery, Advanced SQL, dan Algoritma Machine Learning.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle" data-i18n="skills.subtitle">Kemampuan & Spesialisasi</span>
+          <h2 class="section-title"><span data-i18n="skills.title_prefix">Teknologi &</span> <span class="highlight-gradient" data-i18n="skills.title_highlight">Keahlian</span></h2>
+          <div class="section-line"></div>
+        </div>
+
+        <!-- Filter & Search Controls -->
+        <div class="controls-wrapper">
+          <div class="filter-pills" id="skills-filter">
+            <button class="filter-btn active" data-filter="all" data-i18n="skills.filter_all">Semua Keahlian</button>
+            <button class="filter-btn" data-filter="programming" data-i18n="skills.filter_programming">Pemrograman & Web</button>
+            <button class="filter-btn" data-filter="database" data-i18n="skills.filter_database">Database</button>
+            <button class="filter-btn" data-filter="bi" data-i18n="skills.filter_bi">Visualisasi & BI</button>
+            <button class="filter-btn" data-filter="tools" data-i18n="skills.filter_tools">Tools & Workflow</button>
+          </div>
+
+          <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="text" id="skills-search" placeholder="Cari keahlian (misal: Python, MySQL, Tableau, GitHub)..." aria-label="Cari keahlian">
+          </div>
+        </div>
+
+        <!-- Skills Grid Container -->
+        <div class="skills-grid" id="skills-container">
+          <!-- Skill items generated dynamically via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle" data-i18n="projects.subtitle">Hasil Karya & Portofolio</span>
+          <h2 class="section-title"><span class="highlight-gradient" data-i18n="projects.title">Proyek</span></h2>
+          <div class="section-line"></div>
+        </div>
+
+        <!-- Filter and Search -->
+        <div class="controls-wrapper">
+          <div class="filter-pills" id="projects-filter">
+            <button class="filter-btn active" data-filter="all" data-i18n="projects.filter_all">Semua Proyek</button>
+            <button class="filter-btn" data-filter="ml" data-i18n="projects.filter_ml">Data Science & AI</button>
+            <button class="filter-btn" data-filter="dashboard" data-i18n="projects.filter_dashboard">Web & Multimedia</button>
+          </div>
+
+          <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="text" id="projects-search" placeholder="Cari proyek (misal: NadaNusantara, Path'Ora, MPTI)..." aria-label="Cari proyek">
+          </div>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projects-container">
+          <!-- Dynamic Project Cards will be rendered here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="section services-section" id="services">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle" data-i18n="services.subtitle">Solusi Analitik Yang Saya Tawarkan</span>
+          <h2 class="section-title"><span data-i18n="services.title_prefix">Layanan</span> <span class="highlight-gradient" data-i18n="services.title_highlight">Data Analyst</span></h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card glass-card">
+            <div class="service-icon"><i class="fa-solid fa-chart-line"></i></div>
+            <h3>Exploratory Data Analysis (EDA)</h3>
+            <p>Eksplorasi mendalam pada kumpulan data mentah untuk mengidentifikasi pola, tren bisnis, anomali data, dan korelasi statistik.</p>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-check"></i> Data Cleaning & Wrangling</li>
+              <li><i class="fa-solid fa-check"></i> Statistical Hypothesis Testing</li>
+              <li><i class="fa-solid fa-check"></i> Correlation & Trend Discovery</li>
+            </ul>
+          </div>
+
+          <div class="service-card glass-card">
+            <div class="service-icon"><i class="fa-solid fa-chart-pie"></i></div>
+            <h3>Business Intelligence & Dashboard</h3>
+            <p>Pembuatan dashboard analitik bisnis interaktif berbasis Power BI, Tableau, dan Streamlit untuk pemantauan KPI secara real-time.</p>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-check"></i> Power BI & Tableau Reports</li>
+              <li><i class="fa-solid fa-check"></i> Interactive Filter & Metrics</li>
+              <li><i class="fa-solid fa-check"></i> Executive KPI Summary</li>
+            </ul>
+          </div>
+
+          <div class="service-card glass-card">
+            <div class="service-icon"><i class="fa-solid fa-database"></i></div>
+            <h3>SQL Query & Data Warehousing</h3>
+            <p>Perancangan kueri SQL kompleks, penggabungan tabel (joins), agregasi data, serta ekstraksi data dari database PostgreSQL dan MySQL.</p>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-check"></i> Complex SQL Aggregations & CTE</li>
+              <li><i class="fa-solid fa-check"></i> Database Query Optimization</li>
+              <li><i class="fa-solid fa-check"></i> Data Pipeline & Extraction</li>
+            </ul>
+          </div>
+
+          <div class="service-card glass-card">
+            <div class="service-icon"><i class="fa-solid fa-brain"></i></div>
+            <h3>Predictive Analytics & ML Modeling</h3>
+            <p>Penerapan algoritma machine learning untuk analisis churn, klasifikasi pelanggan, serta estimasi tren masa depan.</p>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-check"></i> Customer Churn & Regression</li>
+              <li><i class="fa-solid fa-check"></i> Classification & Clustering</li>
+              <li><i class="fa-solid fa-check"></i> Model Evaluation & Metrics</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Work Process Stepper -->
+        <div class="process-wrapper">
+          <h3 class="process-title" data-i18n="process.title">Metodologi Analisis Data (Data Workflow)</h3>
+          <div class="process-steps">
+            <div class="process-step">
+              <div class="step-num">01</div>
+              <h4>Data Collection & Question Definition</h4>
+              <p>Merumuskan masalah bisnis dan mengumpulkan dataset mentah dari berbagai sumber.</p>
+            </div>
+            <div class="step-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+            <div class="process-step">
+              <div class="step-num">02</div>
+              <h4>Data Cleaning & Preparation</h4>
+              <p>Membersihkan data dari missing values, outliers, dan melakukan transformasi variabel.</p>
+            </div>
+            <div class="step-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+            <div class="process-step">
+              <div class="step-num">03</div>
+              <h4>Analysis & Modeling</h4>
+              <p>Melakukan pengolahan statistik, kueri SQL, dan pengujian model analytics.</p>
+            </div>
+            <div class="step-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+            <div class="process-step">
+              <div class="step-num">04</div>
+              <h4>Visualization & Insight Reporting</h4>
+              <p>Menyusun dashboard visual dan memberikan rekomendasi aksi berorientasi bisnis.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section class="section experience-section" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle" data-i18n="experience.subtitle">Pengalaman & Riset</span>
+          <h2 class="section-title"><span data-i18n="experience.title_prefix">Pengalaman &</span> <span class="highlight-gradient" data-i18n="experience.title_highlight">Studi</span></h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="experience-timeline">
+          <div class="timeline-track"></div>
+
+          <div class="exp-item left">
+            <div class="exp-dot"><i class="fa-solid fa-list-check"></i></div>
+            <div class="exp-content glass-card">
+              <span class="exp-date">2024 (Semester 7)</span>
+              <h3>Project Manager – Sistem Antrian Cucian Berbasis Web</h3>
+              <span class="company-badge">Matakuliah MPTI – Universitas Ahmad Dahlan</span>
+              <p>Memimpin tim pengembang dalam siklus SDLC pengembangan sistem antrian digital cucian mobil dan motor berbasis website. Bertanggung jawab atas sprint planning Agile/Scrum, alokasi sumber daya, arsitektur antrian real-time, manajemen slot pencucian, dan dashboard analitik operasional.</p>
+              <div class="exp-tags">
+                <span>Project Manager</span> <span>MPTI UAD</span> <span>Agile / Scrum</span> <span>Web System</span> <span>Queue Management</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="exp-item right">
+            <div class="exp-dot"><i class="fa-solid fa-brain"></i></div>
+            <div class="exp-content glass-card">
+              <span class="exp-date">2024 (Semester 6)</span>
+              <h3>Data Scientist Cohort & Developer Capstone 'Path’Ora'</h3>
+              <span class="company-badge">Dicoding x DBS Foundation</span>
+              <p>Lulusan beasiswa intensif talenta data nasional. Mengembangkan proyek Capstone <strong>Path’Ora</strong>: Platform End-to-End Kesiapan Kerja dengan fitur Dashboard Strategis (Talent Gap & Skills Intelligence) serta sistem rekomendasi jalur karir otomatis berbasis Machine Learning.</p>
+              <div class="exp-tags">
+                <span>Dicoding x DBS</span> <span>Capstone Path’Ora</span> <span>Data Scientist</span> <span>Machine Learning</span> <span>Python</span> <span>Streamlit</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="exp-item left">
+            <div class="exp-dot"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="exp-content glass-card">
+              <span class="exp-date">2023 - Sekarang (Semester 7)</span>
+              <h3>Mahasiswa S1 Teknik Informatika & Data Analyst</h3>
+              <span class="company-badge">Universitas Ahmad Dahlan (UAD), Yogyakarta</span>
+              <p>Melanjutkan pendidikan sarjana pada tahun 2023 setelah 2 tahun pengalaman kerja di industri otomotif. Memperdalam peminatan Sains Data, Basis Data Relasional Lanjut (SQL), Machine Learning, serta Business Intelligence.</p>
+              <div class="exp-tags">
+                <span>UAD 2023</span> <span>Sains Data</span> <span>SQL</span> <span>Business Intelligence</span> <span>Python</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="exp-item right">
+            <div class="exp-dot"><i class="fa-solid fa-spray-can"></i></div>
+            <div class="exp-content glass-card">
+              <span class="exp-date">2021 - 2023 (2 Tahun)</span>
+              <h3>Operator Produksi – Departemen Painting</h3>
+              <span class="company-badge">PT Astra Daihatsu Motor (Astra Group)</span>
+              <p>Bekerja secara profesional selama 2 tahun pasca kelulusan SMA tahun 2020. Menjalankan proses produksi dan pengawasan mutu pengecatan bodi kendaraan di Departemen Painting sesuai standar mutu Astra (Zero Defect). Melakukan inspeksi visual, pemantauan parameter proses kerja, pencatatan data cacat (defect rate), serta penerapan budaya Kaizen & 5S.</p>
+              <div class="exp-tags">
+                <span>Painting Department</span> <span>PT Astra Daihatsu Motor</span> <span>Quality Control</span> <span>Defect Rate Monitoring</span> <span>Kaizen & 5S</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="exp-item left">
+            <div class="exp-dot"><i class="fa-solid fa-school"></i></div>
+            <div class="exp-content glass-card">
+              <span class="exp-date">Lulus 2020</span>
+              <h3>Kelulusan Sekolah Menengah Atas (SMA)</h3>
+              <span class="company-badge">Pendidikan Menengah Atas</span>
+              <p>Menyelesaikan pendidikan SMA pada tahun 2020 dengan minat kuat pada sains dan teknologi komputer sebelum memulai perjalanan karir profesional di industri otomotif dan studi sarjana.</p>
+              <div class="exp-tags">
+                <span>Lulusan SMA 2020</span> <span>STEM Interest</span> <span>Foundation</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle" data-i18n="contact.subtitle">Mari Berkolaborasi</span>
+          <h2 class="section-title"><span data-i18n="contact.title_prefix">Hubungi</span> <span class="highlight-gradient" data-i18n="contact.title_highlight">Muhammad Sofyan Arifin</span></h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Info Sidebar -->
+          <div class="contact-info-wrapper">
+            <h3 data-i18n="contact.sidebar_title">Tertarik Berkolaborasi atau Rekrutmen?</h3>
+            <p data-i18n="contact.sidebar_desc">
+              Saya terbuka untuk kesempatan magang (internship), proyek analisis data freelance, maupun posisi Data Analyst full-time. Hubungi saya via email di bawah ini.
+            </p>
+
+            <div class="contact-methods">
+              <a href="mailto:muhamadsofyanarifin310@gmail.com" class="contact-method-card glass-card">
+                <div class="method-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div class="method-details">
+                  <span>Email Resmi</span>
+                  <strong>muhamadsofyanarifin310@gmail.com</strong>
+                </div>
+              </a>
+
+              <div class="contact-method-card glass-card">
+                <div class="method-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="method-details">
+                  <span>Domisili</span>
+                  <strong>Yogyakarta, Indonesia (UAD Campus Area)</strong>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="social-connect">
+              <h4 data-i18n="contact.social_title">Ikuti Saya Di:</h4>
+              <div class="social-links">
+                <a href="https://github.com/Sofyanarf" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/muhammad-sofyan-arifin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/sofyanarf_?dlrf=MW83NWdxMDJocWd1NA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Form -->
+          <div class="contact-form-card glass-card">
+            <form id="contact-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contact-name" data-i18n="contact.form_name">Nama Lengkap *</label>
+                  <input type="text" id="contact-name" name="name" placeholder="Misal: Budi Pratama" required>
+                  <span class="error-msg" id="err-name">Nama wajib diisi.</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-email" data-i18n="contact.form_email">Alamat Email *</label>
+                  <input type="email" id="contact-email" name="email" placeholder="nama@perusahaan.com" required>
+                  <span class="error-msg" id="err-email">Email tidak valid.</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-service" data-i18n="contact.form_service">Keperluan</label>
+                <input type="text" id="contact-service" name="service" placeholder="Tuliskan keperluan Anda di sini (misal: Tawaran Magang, Kerjasama, dll)..." required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message" data-i18n="contact.form_message">Pesan / Deskripsi Proyek *</label>
+                <textarea id="contact-message" name="message" rows="5" placeholder="Tuliskan ide proyek atau pesan Anda di sini..." required></textarea>
+                <span class="error-msg" id="err-message">Pesan minimal 10 karakter.</span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-full btn-glow" id="btn-submit-form">
+                <span data-i18n="contact.form_send">Kirim Pesan</span> <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <a href="#hero" class="nav-brand">
+          <div class="brand-logo">
+            <span>&lt;</span>SA<span>/&gt;</span>
+          </div>
+          <span class="brand-name">Muhammad Sofyan Arifin</span>
+        </a>
+        <p data-i18n="footer.tagline">Data Analyst & Mahasiswa Teknik Informatika Universitas Ahmad Dahlan (UAD) Semester 7.</p>
+      </div>
+
+      <div class="footer-copy">
+        <p>&copy; <span id="current-year">2026</span> Muhammad Sofyan Arifin. Universitas Ahmad Dahlan. All Rights Reserved.</p>
+      </div>
+
+      <div class="footer-backtop">
+        <a href="#hero" class="backtop-btn" title="Kembali ke Atas" aria-label="Scroll back to top">
+          <i class="fa-solid fa-arrow-up"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- PROJECT DETAIL MODAL -->
+  <div class="modal-backdrop" id="project-modal" aria-hidden="true">
+    <div class="modal-box glass-card">
+      <button class="modal-close" id="modal-close-btn" aria-label="Tutup Modal"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal-body" id="modal-project-content">
+        <!-- Content injected dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- INTERACTIVE CV / RESUME MODAL -->
+  <div class="modal-backdrop" id="cv-modal" aria-hidden="true">
+    <div class="modal-box modal-lg glass-card">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-file-invoice"></i> Curriculum Vitae – Muhammad Sofyan Arifin</h3>
+        <div class="modal-header-actions">
+          <button class="btn btn-sm btn-primary" id="btn-print-cv"><i class="fa-solid fa-print"></i> Cetak / Simpan PDF</button>
+          <button class="modal-close" id="cv-modal-close-btn" aria-label="Tutup"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+      </div>
+      <div class="modal-body resume-body" id="resume-printable-area">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- CLI TERMINAL EASTER EGG MODAL -->
+  <div class="terminal-modal" id="terminal-modal" aria-hidden="true">
+    <div class="terminal-window">
+      <div class="terminal-header">
+        <div class="terminal-buttons">
+          <span class="term-btn btn-close" id="term-close"></span>
+          <span class="term-btn btn-min"></span>
+          <span class="term-btn btn-max"></span>
+        </div>
+        <div class="terminal-title">sofyan@uad-laptop: ~/portfolio (zsh)</div>
+        <div class="terminal-actions">
+          <span class="term-hint">Ketik 'help' untuk daftar perintah</span>
+        </div>
+      </div>
+      <div class="terminal-body" id="terminal-output">
+        <div class="term-line">Welcome to Muhammad Sofyan Arifin Interactive Data Shell [v2.4.0]</div>
+        <div class="term-line">Type <span class="term-highlight">'help'</span> to see available commands or <span class="term-highlight">'sudo hire'</span> to get started.</div>
+      </div>
+      <div class="terminal-input-row">
+        <span class="term-prompt">sofyan@uad-portfolio:~$</span>
+        <input type="text" id="terminal-input" autocomplete="off" spellcheck="false" placeholder="Ketik perintah di sini..." aria-label="Terminal Input">
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Main JavaScript Bundle -->
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>
