@@ -13,7 +13,7 @@ export const englishTasksData = [
     typeIcon: 'fa-solid fa-file-lines',
     description: 'A professional assignment document containing an analysis of online shopping texts and a detailed personal experience with e-commerce platforms.',
     fullDescription: 'This academic paper provides an in-depth linguistic and rhetorical analysis of communication in modern electronic commerce. It examines user reviews, promotional copy, terms of service, and UX microcopy across prominent e-commerce platforms, concluding with an evaluative case study of consumer experience and customer satisfaction.',
-    tags: ['Text', 'Professional Writing', 'E-commerce'],
+    tags: ['PDF'],
     deliverableType: 'Academic Essay & Case Study Document',
     durationOrLength: 'Full Academic Essay (8-10 Pages)',
     learningOutcomes: [
@@ -38,7 +38,7 @@ export const englishTasksData = [
     typeIcon: 'fa-solid fa-video',
     description: 'A personal video presentation introducing my background, academic journey, skills, and future career goals in English.',
     fullDescription: 'A formal video presentation delivered in fluent English, structured as a professional self-pitch for tech roles. It introduces my identity, 7th-semester informatics studies at Universitas Ahmad Dahlan, practical industrial foundation at PT Astra Daihatsu Motor, Data Science acceleration at Dicoding x DBS Foundation, and passion for Data Analytics and Business Intelligence.',
-    tags: ['Video', 'Self Introduction', 'English Presentation'],
+    tags: ['Video'],
     deliverableType: 'High-Definition Video Presentation (MP4)',
     durationOrLength: '3 - 5 Minutes Oral Speech',
     learningOutcomes: [
@@ -63,7 +63,7 @@ export const englishTasksData = [
     typeIcon: 'fa-solid fa-graduation-cap',
     description: 'A video presentation explaining the research background and critical analysis of an international English academic journal.',
     fullDescription: 'A comprehensive scholarly presentation reviewing peer-reviewed research in computer science and data analytics. It articulates the problem formulation and methodological motivation for an undergraduate thesis, accompanied by an analytical critique of an indexed Scopus/IEEE international academic journal article.',
-    tags: ['Video', 'Thesis Background', 'Journal Review'],
+    tags: ['Video'],
     deliverableType: 'Recorded Research Defense & Slide Presentation',
     durationOrLength: '7 - 10 Minutes Defense Video & Slide Deck',
     learningOutcomes: [
@@ -88,7 +88,7 @@ export const englishTasksData = [
     typeIcon: 'fa-solid fa-file-pdf',
     description: 'My midterm answer for Part A: a formal application letter for the Data Analyst position, based on my completion of the Dicoding x DBS Foundation (Data Scientist) program.',
     fullDescription: 'Formal academic midterm assignment (Part A) for English course. It comprises a professionally drafted cover letter and formal job application letter tailored specifically for a Data Analyst role. The content highlights comprehensive competencies acquired through the Dicoding x DBS Foundation Coding Camp (Data Scientist cohort), including Capstone project Path’Ora, data analytics workflows, Python machine learning, and SQL business intelligence.',
-    tags: ['PDF', 'UTS · Part A', 'Job Application Letter', 'Data Analyst', 'Dicoding x DBS'],
+    tags: ['PDF'],
     deliverableType: 'Formal Cover / Job Application Letter Document (PDF)',
     durationOrLength: 'Professional Application Letter (Standard Business Format)',
     learningOutcomes: [
@@ -106,14 +106,14 @@ export const englishTasksData = [
   {
     id: 'task-uts-b',
     num: 'B',
-    driveUrl: '',
+    driveUrl: 'https://drive.google.com/file/d/1e0iQaaOzIXY_I0uqPTt6fvd9mhoJLXJ3/view?usp=drive_link',
     title: 'THREE-MINUTE VIDEO PRESENTATION',
     subtitle: 'Technical Competency & Career Pitch in English (UTS Gasal 2026/2027)',
     type: 'Video Presentation',
     typeIcon: 'fa-solid fa-video',
     description: 'My midterm answer for Part B: a three-minute video in English about the specific technical skills I developed during my internship and training, and how they prepare me for the Data Analyst position.',
     fullDescription: 'Midterm examination answer (Part B) featuring a concise, high-impact 3-minute oral presentation delivered entirely in English. The video articulates core technical abilities—ranging from statistical data analysis, SQL query optimization, data storytelling, and production quality control from industrial experience at PT Astra Daihatsu Motor and Dicoding x DBS Foundation—demonstrating professional readiness for Data Analyst roles.',
-    tags: ['Video', 'UTS · Part B', 'Three-Minute Video', 'Oral Presentation', 'Data Analyst Skills'],
+    tags: ['Video'],
     deliverableType: 'Recorded Video Presentation (MP4 / Google Drive)',
     durationOrLength: '3 Minutes Video Speech',
     learningOutcomes: [
