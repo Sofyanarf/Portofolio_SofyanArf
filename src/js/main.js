@@ -10,6 +10,7 @@ import { initSkills } from './skills.js';
 import { initProjects } from './projects.js';
 import { initTerminal } from './terminal.js';
 import { initResume } from './resume.js';
+import { initEnglishTasks } from './englishTasks.js';
 import { initContact } from './contact.js';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -23,5 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initProjects();
   initTerminal();
   initResume();
+  initEnglishTasks();
   initContact();
 });
